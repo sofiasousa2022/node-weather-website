@@ -8,6 +8,7 @@ const hbs = require ('hbs') // Load do hbs (modulo npm)
 
 // Express é uma função sem argumentos de entrada pelo que para executar basta escrever express() e vamos guardar isso na variavel app para depois podermos usar os metodos.
 const app = express()
+const port = process.env.PORT || 3000
 
 
 // DEFINE PATHS FOR EXPRESS CONFIG
@@ -169,8 +170,8 @@ app.get('*' , (req, res) => {
  // Método listen que permite iniciar o servidor. 
  // Primeiro parametro: Porta (neste caso 3000), segundo é uma callback function que vai devolver resposta quando for iniciado, uma vez que é assyncrono
  // Depois de definir este método podemos iniciar atraves da linha de comandos (node app.js) e ver a resposta em http://localhost:3000/
-app.listen(3000, () => {
-    console.log('O servidor is up on port 3000.')
+app.listen(port, () => {
+    console.log('O servidor is up on port ' + port)
 })
 
 

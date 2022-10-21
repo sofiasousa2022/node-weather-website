@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value //Vamos guardar o valor numa variavel
 
     // Queremos que só submeta o fetch quando não há erros e queremos passar a location no URL
-    fetch ('http://localhost:3000/weather?address='+location).then ((response)=> { // A resposta do fetch entra neste response
+    fetch ('/weather?address='+location).then ((response)=> { // A resposta do fetch entra neste response
         response.json().then ((data)=>{  // Com a responde podemos utilziar o metodo response.json que vai transformar em parse a resposta (que estava em json) e depois a função callback vai receber os valores
             if (data.erro) { 
                 messageOne.textContent = data.erro
