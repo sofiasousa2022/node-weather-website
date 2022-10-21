@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) => {
             } else if (body.success === false) { // se por exemplo se enganarem na localização vai dar uma resposta mas essa resposta têm erro por isso conseguimos mostrar o erro atraves do info
                 callback ('Erro: ' + body.error.info, undefined)
             } else { // se não houver erro imprime o que queremos:
-                callback (undefined, 'Type of weather: ' + body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + 'º, but it feels like ' + body.current.feelslike + 'º')
+                callback (undefined, 'Type of weather: ' + body.current.weather_descriptions[0] + '. It is currently ' + body.current.temperature + 'º, but it feels like ' + body.current.feelslike + 'º. And the humidity is '+ body.current.humidity)
             }
         })
 }
