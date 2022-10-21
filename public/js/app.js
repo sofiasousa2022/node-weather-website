@@ -1,6 +1,3 @@
-console.log ('Client side javascript file is loaded')
-
-
 const weatherForm = document.querySelector('form') // Permite manipular o elemento form ou interagir com o que é colocado no form
 const search = document.querySelector('input') // Permite obter o valor do input
 const messageOne = document.querySelector('#message-1') // Queremos manipular o elemento p mas um especifico, pelo que lhe demos um id (no html) e aqui vamos referencialo
